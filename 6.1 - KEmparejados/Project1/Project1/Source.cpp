@@ -1,0 +1,74 @@
+// Nombre del alumno .....
+// Usuario del Juez ......
+
+
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <vector>
+
+using namespace std;
+// función que resuelve el problema
+int resolver(const vector<int> &v, int k) {
+    
+    int acumulador = 0;
+    int i = 0;
+    int j = 0;
+
+    while (j < v.size())
+    {
+        if (v[j] - v[i] == k)
+        {
+            acumulador++;
+            i++;
+            j++;
+        }
+        else if (v[j] - v[i] > k)
+            i++;
+        else
+            j++;
+            
+    }
+
+    return acumulador;
+}
+
+// Resuelve un caso de prueba, leyendo de la entrada la
+// configuración, y escribiendo la respuesta
+bool resuelveCaso() {
+    // leer los datos de la entrada
+    int N, k;
+    cin >> N >> k;
+    if (N == -1)
+        return false;
+    
+    vector <int> v(N);
+    for (int i = 0; i < N; i++)
+        cin >> v[i];
+
+    cout << resolver(v, k) << "\n";
+
+    return true;    
+}
+
+int main() {
+    // Para la entrada por fichero.
+    // Comentar para acepta el reto
+    #ifndef DOMJUDGE
+     std::ifstream in("1.in");
+     auto cinbuf = std::cin.rdbuf(in.rdbuf()); //save old buf and redirect std::cin to casos.txt
+     #endif 
+    
+    
+    while (resuelveCaso())
+        ;
+
+    
+    // Para restablecer entrada. Comentar para acepta el reto
+     #ifndef DOMJUDGE // para dejar todo como estaba al principio
+     std::cin.rdbuf(cinbuf);
+     system("PAUSE");
+     #endif
+    
+    return 0;
+}

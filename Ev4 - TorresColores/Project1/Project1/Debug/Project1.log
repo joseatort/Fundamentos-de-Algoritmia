@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\josea\Escritorio\Cosas Universidad\3º\Primer Cuatrimestre\Fundamentos de Algoritmia\Ejercicios Juez\Ev4\Project1\Project1\Source.cpp(92,23): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\josea\Escritorio\Cosas Universidad\3º\Primer Cuatrimestre\Fundamentos de Algoritmia\Ejercicios Juez\Ev4\Project1\Project1\Source.cpp(31): warning C4715: 'color': no todas las rutas de acceso de control devuelven un valor
+  Project1.vcxproj -> C:\Users\josea\Escritorio\Cosas Universidad\3º\Primer Cuatrimestre\Fundamentos de Algoritmia\Ejercicios Juez\Ev4\Project1\Debug\Project1.exe

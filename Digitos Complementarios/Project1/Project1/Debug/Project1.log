@@ -1,0 +1,66 @@
+﻿  Source.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(249,16): warning C4244: 'inicializando': conversión de '_Ty' a '_Ty1'; posible pérdida de datos
+          with
+          [
+              _Ty=__int64
+          ]
+          and
+          [
+              _Ty1=int
+          ]
+C:\Users\josea\Escritorio\Cosas Universidad\3º\Primer Cuatrimestre\Fundamentos de Algoritmia\Ejercicios Juez\3.1\Project1\Project1\Source.cpp(35): message : Vea la referencia a la creación de una instancia de la función plantilla "std::pair<int,int>::pair<__int64,int,0>(std::pair<__int64,int> &&) noexcept" que se está compilando
+C:\Users\josea\Escritorio\Cosas Universidad\3º\Primer Cuatrimestre\Fundamentos de Algoritmia\Ejercicios Juez\3.1\Project1\Project1\Source.cpp(35): message : Vea la referencia a la creación de una instancia de la función plantilla "std::pair<int,int>::pair<__int64,int,0>(std::pair<__int64,int> &&) noexcept" que se está compilando
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(193,16): warning C4244: 'inicializando': conversión de '_Ty' a '_Ty1'; posible pérdida de datos
+          with
+          [
+              _Ty=double
+          ]
+          and
+          [
+              _Ty1=__int64
+          ]
+C:\Users\josea\Escritorio\Cosas Universidad\3º\Primer Cuatrimestre\Fundamentos de Algoritmia\Ejercicios Juez\3.1\Project1\Project1\Source.cpp(36): message : Vea la referencia a la creación de una instancia de la función plantilla "std::pair<__int64,int>::pair<double,int,0>(_Other1 &&,_Other2 &&) noexcept" que se está compilando
+          with
+          [
+              _Other1=double,
+              _Other2=int
+          ]
+C:\Users\josea\Escritorio\Cosas Universidad\3º\Primer Cuatrimestre\Fundamentos de Algoritmia\Ejercicios Juez\3.1\Project1\Project1\Source.cpp(36): message : Vea la referencia a la creación de una instancia de la función plantilla "std::pair<__int64,int>::pair<double,int,0>(_Other1 &&,_Other2 &&) noexcept" que se está compilando
+          with
+          [
+              _Other1=double,
+              _Other2=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(193,16): warning C4244: 'inicializando': conversión de '_Ty' a '_Ty1'; posible pérdida de datos
+          with
+          [
+              _Ty=__int64
+          ]
+          and
+          [
+              _Ty1=int
+          ]
+C:\Users\josea\Escritorio\Cosas Universidad\3º\Primer Cuatrimestre\Fundamentos de Algoritmia\Ejercicios Juez\3.1\Project1\Project1\Source.cpp(42): message : Vea la referencia a la creación de una instancia de la función plantilla "std::pair<int,int>::pair<__int64,_Ty1,0>(_Other1 &&,_Other2 &&) noexcept" que se está compilando
+          with
+          [
+              _Ty1=__int64,
+              _Other1=__int64,
+              _Other2=__int64
+          ]
+C:\Users\josea\Escritorio\Cosas Universidad\3º\Primer Cuatrimestre\Fundamentos de Algoritmia\Ejercicios Juez\3.1\Project1\Project1\Source.cpp(42): message : Vea la referencia a la creación de una instancia de la función plantilla "std::pair<int,int>::pair<__int64,_Ty1,0>(_Other1 &&,_Other2 &&) noexcept" que se está compilando
+          with
+          [
+              _Ty1=__int64,
+              _Other1=__int64,
+              _Other2=__int64
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(193,54): warning C4244: 'inicializando': conversión de '_Ty' a '_Ty2'; posible pérdida de datos
+          with
+          [
+              _Ty=__int64
+          ]
+          and
+          [
+              _Ty2=int
+          ]
+  Project1.vcxproj -> C:\Users\josea\Escritorio\Cosas Universidad\3º\Primer Cuatrimestre\Fundamentos de Algoritmia\Ejercicios Juez\3.1\Project1\Debug\Project1.exe

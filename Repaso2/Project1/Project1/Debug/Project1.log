@@ -1,0 +1,23 @@
+﻿  Source.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility(193,16): warning C4244: 'inicializando': conversión de '_Ty' a '_Ty1'; posible pérdida de datos
+          with
+          [
+              _Ty=double
+          ]
+          and
+          [
+              _Ty1=int
+          ]
+C:\Users\josea\Escritorio\Cosas Universidad\3º\Primer Cuatrimestre\Fundamentos de Algoritmia\Ejercicios Juez\Repaso2\Project1\Project1\Source.cpp(23): message : Vea la referencia a la creación de una instancia de la función plantilla "std::pair<int,int>::pair<double,int,0>(_Other1 &&,_Other2 &&) noexcept" que se está compilando
+          with
+          [
+              _Other1=double,
+              _Other2=int
+          ]
+C:\Users\josea\Escritorio\Cosas Universidad\3º\Primer Cuatrimestre\Fundamentos de Algoritmia\Ejercicios Juez\Repaso2\Project1\Project1\Source.cpp(23): message : Vea la referencia a la creación de una instancia de la función plantilla "std::pair<int,int>::pair<double,int,0>(_Other1 &&,_Other2 &&) noexcept" que se está compilando
+          with
+          [
+              _Other1=double,
+              _Other2=int
+          ]
+  Project1.vcxproj -> C:\Users\josea\Escritorio\Cosas Universidad\3º\Primer Cuatrimestre\Fundamentos de Algoritmia\Ejercicios Juez\Repaso2\Project1\Debug\Project1.exe

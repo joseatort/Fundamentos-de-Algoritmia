@@ -1,0 +1,128 @@
+// Nombre del alumno .....
+// Usuario del Juez ......
+
+
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <vector>
+#include <limits>
+using namespace std;
+
+bool es_completable(int k, const vector<int>& maximos, vector<int>& marcaje, vector<bool> &marcas, int i)
+{
+    return marcaje[k] <= maximos[k] && !marcas[i];
+}
+
+bool es_final(int k, int N, const vector<int>& minimos, const vector<int>& maximos, vector<int>& marcaje, vector<bool>& marcas, int i)
+{
+    return k == N - 1 && marcaje[k] >= minimos[k] && marcaje[k] <= maximos[k] && !marcas[i];
+}
+
+bool es_mejorable(int coste_actual, int coste_minimo, int R, const vector<int> &minimos, const vector<int>& sueldos, int k, int N)
+{
+
+    if (k == N)
+        return coste_actual < coste_minimo;
+    else
+    {
+        int aux = min(minimos[k] * R, minimos[k] * sueldos[k]);
+        return coste_actual + aux < coste_minimo;
+    }
+        
+}
+
+// función que resuelve el problema
+void VueltaAtras(int N, int M, int k, const vector<int> & minimos, const vector<int> &maximos, 
+                 const vector<int> &sueldos, const vector<int> &patrullas, vector<bool> &marcas,
+                 int reservas, int R, int& costeminimo, int coste_actual, vector<int> &marcaje) {
+    
+    for (int i = 0; i < M; i++)
+    {
+        marcaje[k] += patrullas[i];
+        reservas -= patrullas[i];
+        coste_actual += patrullas[i] * sueldos[k];
+        if (es_final(k, N, minimos, maximos, marcaje, marcas, i))
+            costeminimo = min(costeminimo, coste_actual + R * reservas);
+        else if (es_completable(k, maximos, marcaje, marcas, i) && es_mejorable(coste_actual, costeminimo, R, minimos, sueldos, k + 1, N))
+        {
+            marcas[i] = true;
+
+            if (marcaje[k] >= minimos[k])
+                VueltaAtras(N, M, k + 1, minimos, maximos, sueldos, patrullas, marcas, reservas, R, costeminimo, coste_actual, marcaje);
+            else
+                VueltaAtras(N, M, k, minimos, maximos, sueldos, patrullas, marcas, reservas, R, costeminimo, coste_actual, marcaje);
+
+            marcas[i] = false;
+        }
+        
+        coste_actual -= patrullas[i] * sueldos[k];
+        reservas += patrullas[i];
+        marcaje[k] -= patrullas[i];
+
+    }
+
+}
+
+// Resuelve un caso de prueba, leyendo de la entrada la
+// configuración, y escribiendo la respuesta
+void resuelveCaso() {
+    // leer los datos de la entrada
+    
+    int N, M, R;
+    cin >> N >> M >> R;
+
+    vector<int> minimos(N);
+    vector<int> maximos(N);
+    vector<int> sueldos(N);
+    vector<int> patrullas(M);
+
+    for (int i = 0; i < N; i++)
+        cin >> minimos[i];
+
+    for (int i = 0; i < N; i++)
+        cin >> maximos[i];
+
+    for (int i = 0; i < N; i++)
+        cin >> sueldos[i];
+
+    int reservas = 0;
+    for (int i = 0; i < M; i++)
+    {
+        cin >> patrullas[i];
+        reservas += patrullas[i];
+    }
+        
+
+    vector<bool> marcas(M, false);
+    vector<int> marcaje(N, 0);
+    int costeminimo = numeric_limits<int>::max();
+    VueltaAtras(N, M, 0, minimos, maximos, sueldos, patrullas, marcas, reservas, R, costeminimo, 0, marcaje);
+
+    costeminimo == numeric_limits<int>::max() ? cout << "NO" : cout << costeminimo;
+    cout << "\n";
+}
+
+int main() {
+    // Para la entrada por fichero.
+    // Comentar para acepta el reto
+    #ifndef DOMJUDGE
+     std::ifstream in("1.in");
+     auto cinbuf = std::cin.rdbuf(in.rdbuf()); //save old buf and redirect std::cin to casos.txt
+     #endif 
+    
+    
+    int numCasos;
+    std::cin >> numCasos;
+    for (int i = 0; i < numCasos; ++i)
+        resuelveCaso();
+
+    
+    // Para restablecer entrada. Comentar para acepta el reto
+     #ifndef DOMJUDGE // para dejar todo como estaba al principio
+     std::cin.rdbuf(cinbuf);
+     system("PAUSE");
+     #endif
+    
+    return 0;
+}

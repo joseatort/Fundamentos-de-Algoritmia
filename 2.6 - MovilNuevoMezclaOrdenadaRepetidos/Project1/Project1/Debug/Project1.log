@@ -1,0 +1,7 @@
+﻿  Source.cpp
+C:\Users\josea\Escritorio\Cosas Universidad\3º\Primer Cuatrimestre\Fundamentos de Algoritmia\Ejercicios Juez\2.6\Project1\Project1\Source.cpp(27,19): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\josea\Escritorio\Cosas Universidad\3º\Primer Cuatrimestre\Fundamentos de Algoritmia\Ejercicios Juez\2.6\Project1\Project1\Source.cpp(27,41): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\josea\Escritorio\Cosas Universidad\3º\Primer Cuatrimestre\Fundamentos de Algoritmia\Ejercicios Juez\2.6\Project1\Project1\Source.cpp(40,23): warning C4018: '>=': no coinciden signed/unsigned
+C:\Users\josea\Escritorio\Cosas Universidad\3º\Primer Cuatrimestre\Fundamentos de Algoritmia\Ejercicios Juez\2.6\Project1\Project1\Source.cpp(45,24): warning C4018: '>=': no coinciden signed/unsigned
+C:\Users\josea\Escritorio\Cosas Universidad\3º\Primer Cuatrimestre\Fundamentos de Algoritmia\Ejercicios Juez\2.6\Project1\Project1\Source.cpp(83,23): warning C4018: '<': no coinciden signed/unsigned
+  Project1.vcxproj -> C:\Users\josea\Escritorio\Cosas Universidad\3º\Primer Cuatrimestre\Fundamentos de Algoritmia\Ejercicios Juez\2.6\Project1\Debug\Project1.exe
